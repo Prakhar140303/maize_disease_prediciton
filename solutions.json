@@ -1,0 +1,39 @@
+{
+    "Blight": {
+        "solutions": [
+            "Apply fungicide and remove infected leaves.",
+            "Ensure proper spacing between plants to allow for better airflow.",
+            "Consider crop rotation to reduce future outbreaks."
+        ],
+        "severity_levels": [
+            "If early-stage: Apply preventive fungicides.",
+            "If advanced-stage: Consider aggressive fungicide treatments."
+        ]
+    },
+    "Common_Rust": {
+        "solutions": [
+            "Use resistant hybrids and apply fungicides.",
+            "Remove infected leaves and improve field drainage."
+        ],
+        "severity_levels": [
+            "If minor: Use light fungicide applications.",
+            "If severe: Apply systemic fungicides and remove heavily infected plants."
+        ]
+    },
+    "Gray_Leaf_Spot": {
+        "solutions": [
+            "Improve air circulation by thinning plants.",
+            "Use fungicides and remove infected leaves."
+        ],
+        "severity_levels": [
+            "If mild: Apply preventive fungicides.",
+            "If severe: Use curative fungicides and remove affected parts."
+        ]
+    },
+    "Healthy": {
+        "solutions": [
+            "No treatment needed. The plant is healthy.",
+            "Ensure the plant receives adequate water and nutrients."
+        ]
+    }
+}

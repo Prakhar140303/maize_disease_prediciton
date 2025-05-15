@@ -1,0 +1,71 @@
+# Node modules (React frontend)
+node_modules/
+
+# Build output (React - if using Vite or Webpack)
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python model and data files (if generated or large)
+*.h5
+*.pkl
+*.csv
+
+# Log files
+*.log
+
+# VSCode settings
+.vscode/
+
+# OS-specific
+*.swp
+*.swo
+
+# Coverage/testing
+.coverage
+coverage.xml
+htmlcov/
+
+# Backup or temporary files
+*~
+*.bak
+*.tmp
+
+# Git itself
+.git/
+/best_model
+/data
+
+# === Frontend: React (maize-disease-predictor) ===
+/maize-disease-predictor/node_modules/
+/maize-disease-predictor/dist/
+/maize-disease-predictor/build/
+/maize-disease-predictor/.env
+/maize-disease-predictor/.env.local
+/maize-disease-predictor/.env.development.local
+/maize-disease-predictor/.env.test.local
+/maize-disease-predictor/.env.production.local
+/maize-disease-predictor/.pnp
+/maize-disease-predictor/.pnp.js
+/maize-disease-predictor/coverage
+/maize-disease-predictor/npm-debug.log*
+/maize-disease-predictor/yarn-debug.log*
+/maize-disease-predictor/yarn-error.log*
