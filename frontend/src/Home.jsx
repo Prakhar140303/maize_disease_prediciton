@@ -5,11 +5,11 @@ import {useNavigate} from 'react-router-dom'
 export default function Home() {
     const navigate = useNavigate();
   return (
-    <div className="h-screen flex-col gap-20 flex justify-center items-center bg-no-repeat bg-cover bg-center bg-[url('https://png.pngtree.com/thumb_back/fw800/background/20230308/pngtree-cartoon-drawing-green-plant-leaves-illustration-background-image_1746581.jpg')]">
-      <div className="flex  rounded-lg shadow-lg  flex-col justify-center items-center h-[250px]  w-full max-w-2xl bg-black/50 drop-shadow-2xl text-white">
+    <div className="h-screen flex-col gap-20 flex p-4 justify-center items-center bg-no-repeat bg-cover bg-center bg-[url('https://png.pngtree.com/thumb_back/fw800/background/20230308/pngtree-cartoon-drawing-green-plant-leaves-illustration-background-image_1746581.jpg')]">
+      <div className="flex  rounded-lg shadow-lg  flex-col justify-center items-center h-[250px]  w-full  min-w-2xl bg-black/75 drop-shadow-2xl text-white">
         <FramerTipScroller tips={loadingTips} />
       </div>
-      <div className='flex bg-[#2D3142] text-white text-3xl p-2 rounded-xl shadow-2xl'>
+      <div className='flex bg-[#2D3142] text-white text-3xl font-montserrat p-2 rounded-xl shadow-2xl'>
         <button onClick={() => navigate('/predict')}>Get Started</button>
 
       </div>
