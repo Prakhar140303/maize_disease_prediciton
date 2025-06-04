@@ -1,18 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { loadingTips } from './utils/index';
+import { loadingTips } from './utils/index';  
 import { AnimatePresence, motion } from 'framer-motion';
 import {useNavigate} from 'react-router-dom'
+import Loader from './utils/Loader.jsx';
 export default function Home() {
     const navigate = useNavigate();
+    const [isLoading,setIsLoading] = useState(true);
+    useEffect(() => {
+      const timer  = setTimeout(() => {
+        setIsLoading(false);
+      },2000);
+      return () => clearTimeout(timer);
+    },[]);
   return (
+    isLoading ? <Loader /> :
     <div className="h-screen flex-col gap-20 flex p-4 justify-center items-center bg-no-repeat bg-cover bg-center bg-[url('https://png.pngtree.com/thumb_back/fw800/background/20230308/pngtree-cartoon-drawing-green-plant-leaves-illustration-background-image_1746581.jpg')]">
-      <div className="flex  rounded-lg shadow-lg  flex-col justify-center items-center h-[250px]  w-full  min-w-2xl bg-black/75 drop-shadow-2xl text-white">
+      <div className="flex  rounded-lg shadow-lg  flex-col justify-center items-center h-[250px]  w-full  min-w-2xl  bg-[#c9df8a]/80 drop-shadow-2xl text-[#36802d] font-bold border-2 border-white border-opacity-50">
+        <h1 className='text-3xl md:text-5xl font-bold text-[#234d20]' >Tips </h1>
         <FramerTipScroller tips={loadingTips} />
       </div>
-      <div className='flex bg-[#2D3142] text-white text-3xl font-montserrat p-2 rounded-xl shadow-2xl'>
-        <button onClick={() => navigate('/predict')}>Get Started</button>
+      <motion.div className='flex bg-[#77ab59] text-white text-3xl font-montserrat p-2 rounded-xl shadow-2xl border-2 border-white border-opacity-35'
+        initial ={{scale :1}} whileTap={{scale :0.9}} whileHover={{scale :1.1}}
+      >
+        <button onClick={() => navigate('/predict')}
+        >Get Started</button>
 
-      </div>
+      </motion.div>
     </div>
   );
 }
@@ -40,11 +53,11 @@ function FramerTipScroller({
   };
 
   return (
-    <div className="relative h-full w-full overflow-hidden flex items-center justify-center">
+    <div className="relative h-full w-full overflow-hidden flex gap-4 justify-center">
       <AnimatePresence mode="wait">
         <motion.div
           key={idx}
-          className="absolute  left-0 w-full p-4 text-center text-xl leading-snug"
+          className="absolute  left-0 w-full p-4 text-center md:text-3xl text-xl leading-snug"
           variants={variants}
           initial="enter"
           animate="center"

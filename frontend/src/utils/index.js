@@ -5,3 +5,4 @@ export const loadingTips = [
   "Stay one step ahead of fungal outbreaks—receive instant risk alerts, severity scores, and customized treatment tips tailored to your region's climate and planting schedule.",
   "Monitor disease trends over time with our interactive charts and heatmaps—track progress, compare fields, and fine-tune your crop management like a pro agronomist."
 ];
+

@@ -5,7 +5,7 @@ import Predict from './Predict'
 function App() {
 
   return (
-    <>
+    <div className='font-inconsolata'>
       <Routes>
         <Route path="/" element={<Home />}>
         </Route>
@@ -13,7 +13,7 @@ function App() {
         <Route path='/predict' element={<Predict />}>
         </Route>
       </Routes>
-    </>
+    </div>
   )
 }
 
