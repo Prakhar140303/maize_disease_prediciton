@@ -64,7 +64,7 @@ function ImageUpload() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center w-full">
       <h1>Maize Disease Prediction</h1>
 
       <input type="file" accept="image/*" onChange={handleFileChange} />
